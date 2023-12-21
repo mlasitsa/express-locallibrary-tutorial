@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1 #{title}: #{player.name}
+  p Date of Birth: #{player.date_of_birth_formated}
+  p Position: #{player.position}
+
+  if player_teams.length
+    p #[strong Delete the following teams before attempting to delete this player.]
+
+    div(style='margin-left:20px;margin-top:20px')
+      h4 Teams
+      dl
+        each team in player_teams
+          dt
+            a(href=team.url) #{team.title}
+          dd #{team.summary}
+  else
+    p Do you really want to delete this Player?
+
+    form(method='POST' action='')
+      .form-group
+        input#playerid.form-control(type='hidden', name='playerid', required='true', value=player._id)
+      button.btn.btn-primary(type='submit') Delete

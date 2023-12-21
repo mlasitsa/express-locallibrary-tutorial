@@ -1,0 +1,42 @@
+/* Sidebar Navigation Styles */
+.sidebar-nav {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+  background-color: #343a40; /* Dark background for the sidebar */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+}
+
+.sidebar-nav li {
+  position: relative; /* Position relative for pseudo-elements */
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 12px 24px; /* More padding for better touch targets */
+  color: #ffffff; /* Light text color for contrast */
+  text-decoration: none; /* No underlines on links */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  font-weight: 500; /* Slightly bolder font */
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a:focus {
+  background-color: #495057; /* Darker shade on hover/focus */
+  color: #fff; /* Maintain light text color for contrast */
+}
+
+.sidebar-nav a.active {
+  background-color: #007bff; /* Highlight for active page */
+  color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar-nav {
+    margin-top: 0;
+    border-radius: 0; /* Full width on smaller screens */
+  }
+}
+

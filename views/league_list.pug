@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+    each league in league_list
+      li
+        a(href=league.url) #{league.name}
+
+  if league_list.length === 0
+    li There are no leagues.

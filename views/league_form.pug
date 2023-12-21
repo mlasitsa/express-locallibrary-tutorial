@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1 #{title}
+
+  if league
+    form(method='POST' action=`/catalog/league/${league._id}/update`)
+      .form-group
+        label(for='name') League Name:
+        input#name.form-control(type='text', placeholder='Enter league name', name='name', required='true', value=league.name)
+      button.btn.btn-primary(type='submit') Update
+  else
+    form(method='POST' action='/catalog/league/create')
+      .form-group
+        label(for='name') League Name:
+        input#name.form-control(type='text', placeholder='Enter league name', name='name', required='true')
+      button.btn.btn-primary(type='submit') Create
+
+  if errors
+    ul
+      each error in errors
+        li!= error.msg

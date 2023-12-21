@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #[em LocalLibrary], Sports Data
+
+  h1 Dynamic content
+
+  p The library has the following record counts:
+
+  ul
+    li #[strong Teams:] !{team_count}
+    li #[strong Players:] !{player_count}
+    li #[strong Leagues:] !{league_count}

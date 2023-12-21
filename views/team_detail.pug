@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 Title: #{team.title}
+
+  p #[strong Summary:] #{team.summary}
+  
+  p #[strong League:]
+    if Array.isArray(team.league) 
+      each league in team.league
+        a(href=league.url) #{league.name}
+    else
+      a(href=team.league.url) #{team.league.name}
+
+  hr
+  p
+    a.btn.btn-danger(href=team.url+'/delete') Delete Team
+  p
+    a.btn.btn-primary(href=team.url+'/update') Update Team

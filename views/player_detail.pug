@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+  h1 Player: #{player.name}
+  p Date of Birth: #{player.date_of_birth_formatted}
+  p Position: #{player.position}
+
+  div(style='margin-left:20px;margin-top:20px')
+
+    h4 Teams
+
+    dl
+      each team in player_teams
+        dt
+          a(href=team.url) #{team.title}
+        dd #{team.summary}
+
+      else
+        p This player has no teams.
+  hr
+  p
+    a(href=player.url+'/delete') Delete player
+  p
+    a(href=player.url+'/update') Update player 

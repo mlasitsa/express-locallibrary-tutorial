@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1= title
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='title') Title:
+      input#title.form-control(type='text', placeholder='Team Name' name='title' required='true' value=(undefined===team ? '' : team.title) )
+
+    div.form-group
+      label(for='summary') Summary:
+      textarea#summary.form-control(type='textarea', placeholder='Summary' name='summary' required='true') #{undefined===team ? '' : team.summary}
+
+    div.form-group
+      label(for='league') League:
+      select#league.form-control(name='league' required='true')
+        option(value='' disabled selected) Select League
+        - if (team && team.league)
+          - for (let league of leagues)
+            - const isSelected = team.league._id && league._id && team.league._id.toString() === league._id.toString();
+            option(value=league._id selected=isSelected) #{league.name}
+        - else
+          - for (let league of leagues)
+            option(value=league._id) #{league.name}
+
+    button.btn.btn-primary(type='submit') Submit
+
+  if errors
+    ul
+      for error in errors
+        li!= error.msg

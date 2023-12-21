@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1 Delete League: #{league.name}
+
+  if league_teams.length
+    p #[strong Delete the following teams before attempting to delete this league.]
+
+    div(style='margin-left:20px;margin-top:20px')
+      h4 Teams
+      dl
+        each team in league_teams
+          dt
+            a(href=team.url) #{team.title}
+          dd #{team.summary}
+  else
+    p Do you really want to delete this League?
+
+    form(method='POST' action='')
+      div.form-group
+        input#leagueid.form-control(type='hidden', name='leagueid', required='true', value=league._id)
+      button.btn.btn-primary(type='submit') Delete
