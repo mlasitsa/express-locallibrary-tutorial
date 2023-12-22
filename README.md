@@ -18,7 +18,8 @@ Database Integration: Utilizes MongoDB Atlas for robust database management, fea
 User Interface: Offers a clean and responsive interface for straightforward interaction with the application's features.
 
 ## Technologies Used:
-JavaScript, Node.js, Express.js, MongoDB Atlas, CSS, PUG
+JavaScript, Node.js, Express.js, MongoDB Atlas, CSS, PUG.
+
 Additional Tools: Mongoose for MongoDB object modeling.
 
 ## Setup and Installation:
