@@ -9,7 +9,7 @@ This application, built as a project for Full-Stack Web Development, showcases t
 
 Here's a walkthrough of implemented features:
 
-<img src='https://imgur.com/gallery/QeaXL3d' title='Video Walkthrough' width='' alt='Video Walkthrough' />     
+<img src='https://i.imgur.com/4wZVl7H.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />       
 GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
 
 ## Features:
@@ -23,6 +23,9 @@ Additional Tools: Mongoose for MongoDB object modeling.
 
 ## Setup and Installation:
 Clone the Repository: git clone https://github.com/mlasitsa/operationsCRUD
+
 Install Dependencies: Navigate to the project directory and run npm install to install necessary packages.
+
 Environment Configuration: Set up the required environment variables for database access and other configurations.
+
 Running the Application: Instructions on how to start the server and access the application locally.
