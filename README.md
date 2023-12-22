@@ -9,7 +9,7 @@ This application, built as a project for Full-Stack Web Development, showcases t
 
 Here's a walkthrough of implemented features:
 
-<img src='[https://i.imgur.com/2Qo2Oiw.gif](https://imgur.com/gallery/QeaXL3d)' title='Video Walkthrough' width='' alt='Video Walkthrough' />     
+<img src='https://imgur.com/gallery/QeaXL3d' title='Video Walkthrough' width='' alt='Video Walkthrough' />     
 GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
 
 ## Features:
